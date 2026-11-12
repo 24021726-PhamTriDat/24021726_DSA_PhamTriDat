@@ -46,20 +46,30 @@ int main(){
     int a[100];
     int n = 0;
     int b[100];
-    insert(a,n,6);
-    insert(a,n,3);
-    insert(a,n,4);
-    insert(a,n,5);
-    insert(a,n,7);
-    heapsort(a,n,b);
-    for(int i=1;i<=n;i++){
-        cout<<b[i-1]<<" ";
+    int sl;
+
+    cin >> sl;
+    for(int i = 0; i < sl; i++) {
+        int x;
+        cin >> x;
+        insert(a, n, x); 
+    }
+    for(int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+ 
+    heapsort(a, n, b);
+    for(int i = 0; i < n; i++) {
+        cout << b[i] << " ";
     }
 
-    deleteroot(a,n);
-    for(int i=1;i<=n;i++){
-        cout<<a[i-1]<<" ";
+     
+    deleteroot(a, n); 
+    deleteroot(a, n); 
+    for(int i = 0; i < n; i++) {
+        cout << a[i] << " ";
     }
+    
 
     return 0;
 }
